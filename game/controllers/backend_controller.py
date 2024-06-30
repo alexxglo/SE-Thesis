@@ -1,6 +1,6 @@
 import requests
 
-url = "http://192.168.1.155:8082/"
+url = "http://{IP4-Address}:8082/"
 headers = {"Content-Type": "*/*"}
 
 
