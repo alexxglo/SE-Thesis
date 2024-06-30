@@ -43,7 +43,7 @@ export default defineComponent({
         code: inputCode.value
       }).then((response) => {
         if(response.status == 200) {
-          const socket = io('ws://192.168.1.155:8085' + '?room=' + inputCode.value + inputName.value, {
+          const socket = io('ws://{IP4-Address}:8085' + '?room=' + inputCode.value + inputName.value, {
           autoConnect: false,
           cors: {
             origin:'*'
