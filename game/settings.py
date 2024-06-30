@@ -24,7 +24,7 @@ IMAGE_GENERATED = False
 
 # --- init socket connection ---
 def init_websocket():
-    sio.connect(url='ws://192.168.1.155:8085')  # connect to server
+    sio.connect(url='ws://{IP4-Address}:8085')  # connect to server
     sio.emit(event="init_game", data={
         "roomCode": ROOM_CODE
     })  # send server the roomCode
