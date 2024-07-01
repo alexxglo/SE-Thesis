@@ -4,6 +4,7 @@ from arcade import Texture
 from dnd_character.monsters import Monster
 from openai import OpenAI
 import PIL.Image
+import settings
 
 from Attack import Attack
 
@@ -42,7 +43,7 @@ def predictMob(mob_input):
 
 
 def generate_boss_name(input):
-    client = OpenAI(api_key="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")
+    client = OpenAI(api_key=settings.OPENAI_API_KEY)
     completion = client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[
@@ -55,7 +56,7 @@ def generate_boss_name(input):
 
 
 def generate_main_attack_name(input):
-    client = OpenAI(api_key="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")
+    client = OpenAI(api_key=settings.OPENAI_API_KEY)
     completion = client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[
